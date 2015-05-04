@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+
+<div id="background">
+<div id="global">
+
+
+<div id="header">
+<div id="headerA"><div id="title">XMAD STYLE3</div>
+<{foreach item=block from=$xoops_lblocks}>
+<{if $block.title == "Menu utilisateur" or $block.title == "Connexion"}>
+<div id="BlockUser">
+<div id="BlocktitleUser"><{$block.title}></div>
+<div id="blockcontentUser"><{$block.content}></div>
+</div>
+<{/if}>
+<{/foreach}>
+</div>
+<div id="headerB"></div>
+<div id="headerC"></div>
+</div>
+<div id="menubar"><a href="<{$xoops_url}>">Accueil</a>&nbsp;-&nbsp;<a href="<{$xoops_url}>/modules/news">Articles</a>&nbsp;-&nbsp;<a href="<{$xoops_url}>/modules/newbb">Forum</a>&nbsp;-&nbsp;<a href="<{$xoops_url}>/modules/mylinks">Liens web</a>&nbsp;-&nbsp;<a href="<{$xoops_url}>/modules/contacts">Contact</a></div>
+<div id="headerend"></div>
+
+<!-- Start Left Column loop (X-O-O-O) -->
+
+<div id="LeftColumn">
+<{foreach item=block from=$xoops_lblocks}>
+<{if $block.title != "Menu utilisateur" and $block.title != "Connexion"}>
+<div class="LeftBlocks">
+<div class="L_Blocktitle"><{$block.title}></div>
+<div class="Lblockcontent"><{$block.content}></div>
+</div>
+<{/if}>
+<{/foreach}>
+<div class="LeftBlocks">
+<div class="L_Blocktitle">Réclames</div>
+<div class="L_blockcontent" style="text-align:center;"><a href="http://www.getfirefox.com" target="_blank" alt="Get Firefox"><img src="<{$xoops_url}>/themes/xmadstyle3/images/ff.gif"/></a></div>
+</div>
+</div>
+
+
+<!-- End left Column loop -->
+
+
+<div id="clip"><span id="soucheA"><{$xoops_sitename}></span><span id="soucheB"><{$xoops_pagetitle}></span><div id="ref">&nbsp;Ref : <{$smarty.now}><br/>&nbsp;Date : <{$smarty.now|date_format:"%e/%m/%Y"}><br/>&nbsp;Auteur : <{$xoops_meta_author}></div></div>
+<div id="board">
+
+	<{if $xoops_showcblock == 1}>
+	<div id="CC_Column">
+<{foreach item=block from=$xoops_ccblocks}>
+<div class="CC_Blocks">
+<div class="CC_blocktitle"><{$block.title}></div>
+<div class="CC_blockcontent"><{$block.content}></div>
+</div>
+<{/foreach}>
+
+
+<!-- Start Center-Left Column Loop (O-x-O-O) --> 
+
+<div id="CL_Column">
+<{foreach item=block from=$xoops_clblocks}>
+<div class="CL_Blocks">
+<div class="CL_Blocktitle"><{$block.title}></div>
+<div class="CL_blockcontent"><{$block.content}></div>
+</div>
+<{/foreach}>
+</div>
+<!-- End Center-Left Column Loop --> 
+
+<!-- Start Center-Right Column Loop (O-O-x-O) --> 
+
+<div id="CR_Column">
+<{foreach item=block from=$xoops_crblocks}>
+<div class="CR_Blocks">
+<div class="CR_Blocktitle"><{$block.title}></div>
+<div class="CR_blockcontent"><{$block.content}></div>
+</div>
+<{/foreach}>
+</div>
+<!-- End Center-Right Column Loop --> 
+</div>
+	<{/if}>
+<div id="Xoopscontents"><div id="Modulecontents"><{$xoops_contents}></div></div>
+
+<div id="footboard"></div>
+</div>
+<div id="clear"></div>
+</div>
+<div id="footer"><{$xoops_footer}> | Thème by <a href="http://xmad.mercowart.com">XMAD</a>/<a href="http://www.mercowart.com">Mercowart</a></div>
+</div> 
+
+</body>
+</html>
